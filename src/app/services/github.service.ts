@@ -24,7 +24,7 @@ export class GithubService {
 
   //va a recibir este metodo un nombre de clase
   getClases(modulo: String): Observable<any>{
-    return this.http.get(this.url + `${modulo}`);
+    return this.http.get(this.url + "clases\\"+ `${modulo}`);
   }
   
   getClase(modulo:string, clase:string): Observable<any>{
@@ -32,11 +32,11 @@ export class GithubService {
   }
 
   //EJES
-  getEjesDiarios(modulo: String){
+  getEjesDiarios(): Observable<any>{
     return this.http.get(this.url + "ejes\\diario\\");
   }
 
-  getEjeDiario(eje: string){
+  getEjeDiario(eje: string): Observable<any>{
     return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
   }
 }

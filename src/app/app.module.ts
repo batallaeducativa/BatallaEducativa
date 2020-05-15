@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 //paginas
 import { ClaseComponent } from './paginas/clases/clase/clase.component';
+import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.component';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -34,7 +35,8 @@ import { GithubService } from './services/github.service';
     HomeComponent,
     SeminarioComponent,
     SidenavComponent,
-    ClaseComponent
+    ClaseComponent,
+    EjesdiariosComponent
   ],
   imports: [
     BrowserModule,
