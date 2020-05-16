@@ -25,18 +25,27 @@ export class SeminarioComponent implements OnInit {
     this.nombreClasesSeminario = new Array();
     this.claseSeminario = new Array();
     let i = 1;
+    let nombre: string;
 
     this.githubService.getClases('inicioBrigada').subscribe(data => {
-        data.forEach(item => {          
-            this.githubService.getClase('inicioBrigada', item.name).subscribe(data => {
-              console.log(data);
-              this.claseSeminario.push(data);
-            });
+        data.forEach(item => {   
+            if((item.name).includes(".htm"))
+            {
+              this.githubService.getClase('inicioBrigada', item.name).subscribe(data => {
+                let nombreClase = data.name.split(".",2)[0];
+                console.log(nombreClase);
+                this.claseSeminario.push(nombreClase);
+              });
+            }            
         });
+    });
+
+    this.claseSeminario.sort(function (a, b) {
+      return a.localeCompare(b);
     });
   }
 
   verClase(nombre: string){
-    this.router.navigate(['\clase',nombre]);
+    this.router.navigate(['\clases',nombre + ".html"]);
   }
 }

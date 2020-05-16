@@ -5,10 +5,10 @@
       <div class="card" *ngFor="let clase of claseSeminario; let i = index">
           <!--<img class="card-img-top" src="..." alt="Card image cap">-->
           <div class="card-body">
-            <h5 class="card-title">{{clase.name}}</h5>
+            <h5 class="card-title">{{clase}}</h5>
             <p class="card-text">Acá iría una breve descripción de la clase para.</p>
             <p class="card-text"><small class="text-muted">Acá va la última vez que se modificó</small></p>
-            <button (click)= "verClase(clase.name)" type="button" class="btn btn-outline-primary btn-block" >Ver clase</button>
+            <button (click)= "verClase(clase)" type="button" class="btn btn-outline-primary btn-block" >Ver clase</button>
           </div>
       </div>
   </div>

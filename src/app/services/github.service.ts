@@ -11,8 +11,8 @@ export class GithubService {
   //public results: Observable<Clases>;
   public url: String = 'https://api.github.com/repos/batallaeducativa/batallaeducativa/contents/';
   private url_content: string = 'https://raw.githubusercontent.com/batallaeducativa/batallaeducativa/master/clases/';
-  /*private token = "";
-  private  opts = {
+  //private token = "a4cdec8407e7f937d9d07af2c522895d11584a28 ";
+  /*private  opts = {
     headers: new HttpHeaders({
       "Authorization": `Token ${this.token}`
     })
@@ -25,18 +25,22 @@ export class GithubService {
   //va a recibir este metodo un nombre de clase
   getClases(modulo: String): Observable<any>{
     return this.http.get(this.url + "clases\\"+ `${modulo}`);
+    //return this.http.get(this.url + "clases\\"+ `${modulo}`, this.opts);
   }
   
   getClase(modulo:string, clase:string): Observable<any>{
     return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`);
+    //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`, this.opts);
   }
 
   //EJES
   getEjesDiarios(): Observable<any>{
     return this.http.get(this.url + "ejes\\diario\\");
+    //return this.http.get(this.url + "ejes\\diario\\", this.opts);
   }
 
   getEjeDiario(eje: string): Observable<any>{
     return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
+    //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`, this.opts);
   }
 }

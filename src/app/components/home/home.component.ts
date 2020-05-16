@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubService } from '../../services/github.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ export class HomeComponent implements OnInit {
   private modulos:any[] = [
     {
       nombre: "Inicio brigadas",
-      link: "seminario"
+      link: "inicioBrigada"
     },
     {
       nombre: "1ro",
@@ -26,11 +27,22 @@ export class HomeComponent implements OnInit {
     }
   ]
 
-  constructor() { 
+  private ejesdiarios:any[];
+
+  constructor(private githubService: GithubService) { 
+    this.githubService.getEjesDiarios().subscribe(data => {
+      data.forEach(item => {          
+          this.githubService.getEjeDiario(item.name).subscribe(data => {
+            console.log(data);
+            this.ejesdiarios.push({
+              name: data.name
+            });
+          });
+      });
+    });
   }
 
   ngOnInit() {
-
   }
 
 }

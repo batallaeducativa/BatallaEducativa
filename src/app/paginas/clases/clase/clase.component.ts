@@ -19,7 +19,7 @@ export class ClaseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.githubService.getClase('seminario', this.nombreClase).subscribe(data => {
+    this.githubService.getClase('inicioBrigada', this.nombreClase).subscribe(data => {
       //base64 decode to unicode
         this.contenidoClase = decodeURIComponent(atob(data.content).split('').map(function(c) {
           return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);

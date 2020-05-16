@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ejesdiarios.component.html',
   styleUrls: ['./ejesdiarios.component.css']
 })
+
 export class EjesdiariosComponent implements OnInit {
 
   constructor() { }
