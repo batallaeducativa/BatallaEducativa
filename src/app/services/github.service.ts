@@ -11,46 +11,46 @@ export class GithubService {
   //public results: Observable<Clases>;
   public url: String = 'https://api.github.com/repos/batallaeducativa/batallaeducativa/contents/';
   private url_content: string = 'https://raw.githubusercontent.com/batallaeducativa/batallaeducativa/master/clases/';
-  private token = "99dc79c970d67447dfaaa9c1a5110792a62153ed ";
-  private  opts = {
+
+/*  private  opts = {
     headers: new HttpHeaders({
       "Authorization": `Token ${this.token}`
     })
   };
-  //inyección de http
+  //inyección de http*/
   constructor(private http: HttpClient) { }
 
   //CLASES
 
   //va a recibir este metodo un nombre de clase
   getClases(modulo: String): Observable<any>{
-    //return this.http.get(this.url + "clases\\"+ `${modulo}`);
-    return this.http.get(this.url + "clases\\"+ `${modulo}`, this.opts);
+    return this.http.get(this.url + "clases\\"+ `${modulo}`);
+    //return this.http.get(this.url + "clases\\"+ `${modulo}`, this.opts);
   }
   
   getClase(modulo:string, clase:string): Observable<any>{
-    //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`);
-    return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`, this.opts);
+    return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`);
+    //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`, this.opts);
   }
 
   //EJES
   getEjesDiarios(): Observable<any>{
-    //return this.http.get(this.url + "ejes\\diario\\");
-    return this.http.get(this.url + "ejes\\diario\\", this.opts);
+    return this.http.get(this.url + "ejes\\diario\\");
+    //return this.http.get(this.url + "ejes\\diario\\", this.opts);
   }
 
   getEjeDiario(eje: string): Observable<any>{
-    //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
-    return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`, this.opts);
+    return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
+    //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`, this.opts);
   }
 
   getEjesMensuales(): Observable<any>{
-    //return this.http.get(this.url + "ejes\\diario\\");
-    return this.http.get(this.url + "ejes\\mensual\\", this.opts);
+    return this.http.get(this.url + "ejes\\diario\\");
+    //return this.http.get(this.url + "ejes\\mensual\\", this.opts);
   }
 
   getEjeMensual(eje: string): Observable<any>{
-    //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
-    return this.http.get<any>(this.url + "ejes\\mensual\\"+ `${eje}`, this.opts);
+    return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
+    //return this.http.get<any>(this.url + "ejes\\mensual\\"+ `${eje}`, this.opts);
   }
 }
