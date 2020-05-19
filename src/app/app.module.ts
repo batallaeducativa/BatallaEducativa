@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 //paginas
 import { ClaseComponent } from './paginas/clases/clase/clase.component';
 import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.component';
+import { EjesmensualesComponent } from './paginas/ejesmensuales/ejesmensuales.component';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { GithubService } from './services/github.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import { GithubService } from './services/github.service';
     SeminarioComponent,
     SidenavComponent,
     ClaseComponent,
-    EjesdiariosComponent
+    EjesdiariosComponent,
+    EjesmensualesComponent
   ],
   imports: [
     BrowserModule,

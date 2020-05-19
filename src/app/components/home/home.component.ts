@@ -29,17 +29,7 @@ export class HomeComponent implements OnInit {
 
   private ejesdiarios:any[];
 
-  constructor(private githubService: GithubService) { 
-    this.githubService.getEjesDiarios().subscribe(data => {
-      data.forEach(item => {          
-          this.githubService.getEjeDiario(item.name).subscribe(data => {
-            console.log(data);
-            this.ejesdiarios.push({
-              name: data.name
-            });
-          });
-      });
-    });
+  constructor() { 
   }
 
   ngOnInit() {

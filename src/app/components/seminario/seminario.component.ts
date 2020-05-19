@@ -46,6 +46,6 @@ export class SeminarioComponent implements OnInit {
   }
 
   verClase(nombre: string){
-    this.router.navigate(['\clases',nombre + ".html"]);
+    this.router.navigate(['\clases',nombre + ".htm"]);
   }
 }
