@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\"-->\r\n<!--<div class=\"toolbar\" role=\"banner\">\r\n    <img\r\n      width=\"40\"\r\n      alt=\"batallaeducativa logo\"\r\n      src=\"../../../assets/img/batallaeducativa.png\"\r\n    />\r\n    <span>Batalla educativa</span>\r\n      <div class=\"spacer\"></div>\r\n  </div>-->\r\n  \r\n  <div class=\"content\" role=\"main\">\r\n  \r\n    <h2 id=\"titulo\"> Materiales de formación</h2>\r\n    <p></p>\r\n  \r\n    <div class=\"card-container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-3 d-flex justify-content-center\" *ngFor=\"let modulo of modulos\">\r\n              <a class=\"card  text-center\" [routerLink]=\"modulo.link\">\r\n                  <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z\"/></svg>\r\n                    <span>{{modulo.nombre}}</span>          \r\n                  <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>    \r\n              </a>\r\n          </div>\r\n        </div>\r\n    </div>\r\n  <!-- Next Steps -->\r\n  <h2 id=\"titulo\">Coyuntura</h2>\r\n  <p>Documentos para el seguimiento de la coyuntura, el debate y la reflexión como herramienta ideológica de la organización</p>\r\n  \r\n  <input type=\"hidden\" #selection>\r\n  \r\n  <div class=\"card-container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-3 d-flex justify-content-center\" *ngFor=\"let ejediario of ejesdiarios | slice:0:10\">\r\n            <a class=\"card  text-center\" [routerLink]=\"ejediario.name\">\r\n                <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z\"/></svg>\r\n                  <span>{{ejediario.name}}</span>          \r\n                <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>    \r\n            </a>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"card-container\">\r\n  \r\n    <div class=\"card card-small\" (click)=\"selection.value = 'material'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n  \r\n      <span>EJES DIARIO 07/04</span>\r\n    </div>\r\n  \r\n    <div class=\"card card-small\" (click)=\"selection.value = 'dependency'\" tabindex=\"0\">\r\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n  \r\n      <span>EJES DIARIO 08/04</span>\r\n    </div>\r\n  \r\n    <div class=\"card card-small\" (click)=\"selection.value = 'test'\" tabindex=\"0\">\r\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n      <span>EJES DIARIO 09/04</span>\r\n    </div>\r\n  \r\n    <div class=\"card card-small\" (click)=\"selection.value = 'build'\" tabindex=\"0\">\r\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n  \r\n      <span>EJES DIARIO 10/04</span>\r\n    </div>\r\n  </div>-->\r\n  \r\n    <!-- Resources -->\r\n    <footer>\r\n        Bachillerato populares por la batalla educativa\r\n        <a href=\"https://github.com/angular/angular\" target=\"_blank\" rel=\"noopener\">\r\n          <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\" fill=\"#1976d2\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>\r\n        </a>\r\n    </footer>\r\n  \r\n    <svg id=\"clouds\" alt=\"Gray Clouds Background\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2611.084\" height=\"485.677\" viewBox=\"0 0 2611.084 485.677\">\r\n      <path id=\"Path_39\" data-name=\"Path 39\" d=\"M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z\" transform=\"translate(142.69 -634.312)\" fill=\"#eee\"/>\r\n    </svg>\r\n  \r\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\"-->\r\n<!--<div class=\"toolbar\" role=\"banner\">\r\n    <img\r\n      width=\"40\"\r\n      alt=\"batallaeducativa logo\"\r\n      src=\"../../../assets/img/batallaeducativa.png\"\r\n    />\r\n    <span>Batalla educativa</span>\r\n      <div class=\"spacer\"></div>\r\n  </div>-->\r\n  \r\n  <div class=\"content\" role=\"main\">\r\n  \r\n    \r\n      <h2 id=\"titulo\">Materiales de formación</h2>\r\n  \r\n    <div class=\"card-container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-3 d-flex justify-content-center\" *ngFor=\"let modulo of modulos\">\r\n              <a class=\"card  text-center\" [routerLink]=\"modulo.link\">\r\n                  <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z\"/></svg>\r\n                    <span>{{modulo.nombre}}</span>          \r\n                  <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>    \r\n              </a>\r\n          </div>\r\n        </div>\r\n    </div>\r\n  <!-- Next Steps -->\r\n  <h2 id=\"titulo\">Coyuntura</h2>\r\n  <p>Documentos para el seguimiento de la coyuntura, el debate y la reflexión como herramienta ideológica de la organización</p>\r\n  \r\n  <input type=\"hidden\" #selection>\r\n  \r\n  <div class=\"card-container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-3 d-flex justify-content-center\" *ngFor=\"let ejediario of ejesdiarios | slice:0:10\">\r\n            <a class=\"card  text-center\" [routerLink]=\"ejediario.name\">\r\n                <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z\"/></svg>\r\n                  <span>{{ejediario.name}}</span>          \r\n                <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>    \r\n            </a>\r\n        </div>\r\n    </div>\r\n  </div>\r\n  <!--<div class=\"card-container\">-->\r\n    <!--<div class=\"card card-small\" (click)=\"selection.value = 'material'\" tabindex=\"0\">\r\n      <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n\r\n      <span>EJES MENSUALES</span>\r\n    </div>-->\r\n    <div class=\"card-container mb-12\">\r\n      <div class=\"row no-gutters\">\r\n        <div class=\"col-md-3\">\r\n          <img src=\"../../../assets/img/EJES/abril.png\" class=\"card-img\" \r\n          alt=\"ejes_mensual\"> \r\n        </div>\r\n        <div class=\"col-md-3 border-danger mb-3\">\r\n          <div class=\"card-body\">\r\n            <h5 class=\"card-title\">EJES MENSUALES</h5>\r\n            <p class=\"card-text\">Descripción corta del ejes</p>\r\n            <button class=\"btn btn-outline-primary btn-block nav-item nav-link-edit\" [routerLink]=\"['ejes_mensuales']\">Ver más ...</button >\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md-3\">\r\n          <img src=\"../../../assets/img/EJES/ejes_diario.png\" class=\"card-img\" alt=\"ejes_mensual\">          \r\n        </div>\r\n        <div class=\"col-md-3\">\r\n          <div class=\"card-body\">\r\n            <h5 class=\"card-title\">EJES DIARIOS</h5>\r\n            <p class=\"card-text\">Descripción corta del ejes</p>\r\n            <button class=\"btn btn-outline-primary btn-block nav-item nav-link-edit\" [routerLink]=\"['ejes_diarios']\">Ver más ...</button >\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <!--<div class=\"card card-small\" (click)=\"selection.value = 'material'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n  \r\n      <span>EJES DIARIOS</span>\r\n    </div>-->\r\n  \r\n    <!-- Resources -->\r\n    <footer>\r\n        Bachillerato populares por la batalla educativa\r\n        <a href=\"https://github.com/angular/angular\" target=\"_blank\" rel=\"noopener\">\r\n          <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\" fill=\"#1976d2\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>\r\n        </a>\r\n    </footer>\r\n  \r\n    <svg id=\"clouds\" alt=\"Gray Clouds Background\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2611.084\" height=\"485.677\" viewBox=\"0 0 2611.084 485.677\">\r\n      <path id=\"Path_39\" data-name=\"Path 39\" d=\"M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z\" transform=\"translate(142.69 -634.312)\" fill=\"#eee\"/>\r\n    </svg>\r\n  \r\n  </div>");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"example-container\" [class.example-is-mobile]=\"mobileQuery.matches\" *ngIf=\"shouldRun\">\r\n    <mat-toolbar color=\"warn\" class=\"example-toolbar\">\r\n      <button mat-icon-button (click)=\"snav.toggle()\">\r\n        <!--<mat-icon>menu</mat-icon>-->\r\n      <img\r\n      pacing=\"20px\"\r\n      width=\"40\"\r\n      alt=\"batallaeducativa logo\"\r\n      src=\"./assets/img/batallaeducativa.png\"\r\n      /></button>\r\n      <h1 id=\"titulonavbar\" class=\"example-app-name\">   Batalla educativa</h1>\r\n    </mat-toolbar>\r\n  \r\n    <mat-sidenav-container class=\"example-sidenav-container\"\r\n                           [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n      <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                   [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\" style=\"width: 170px;\">\r\n        <mat-nav-list>\r\n          <a mat-list-item [routerLink]=\"nav.route\" *ngFor=\"let nav of fillerNav\">\r\n            <mat-icon>{{nav.icon}}</mat-icon> \r\n            <span style=\"padding-left: 5px;\">{{ nav.name}}</span>\r\n          </a>\r\n        </mat-nav-list>\r\n      </mat-sidenav>\r\n  \r\n      <mat-sidenav-content>\r\n        <router-outlet></router-outlet>\r\n      </mat-sidenav-content>\r\n    </mat-sidenav-container>\r\n  </div>  \r\n  \r\n  <!-- Copyright 2019 Google LLC. All Rights Reserved.\r\n      Use of this source code is governed by an MIT-style license that\r\n      can be found in the LICENSE file at http://angular.io/license -->");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"example-container\" [class.example-is-mobile]=\"mobileQuery.matches\" *ngIf=\"shouldRun\">\r\n    <mat-toolbar color=\"warn\" class=\"example-toolbar\">\r\n      <button mat-icon-button (click)=\"snav.toggle()\">\r\n        <!--<mat-icon>menu</mat-icon>-->\r\n      <img\r\n      pacing=\"20px\"\r\n      width=\"40\"\r\n      alt=\"batallaeducativa logo\"\r\n      src=\"./assets/img/batallaeducativa.png\"\r\n      /></button>\r\n      <h1 id=\"titulonavbar\" class=\"example-app-name\">   Batalla educativa</h1>\r\n    </mat-toolbar>\r\n  \r\n    <mat-sidenav-container class=\"example-sidenav-container\"\r\n                           [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\">\r\n      <mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\"\r\n                   [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\" style=\"width: 200px;\">\r\n        <mat-nav-list>\r\n          <a mat-list-item [routerLink]=\"nav.route\" *ngFor=\"let nav of fillerNav\">\r\n            <mat-icon>{{nav.icon}}</mat-icon> \r\n            <span style=\"padding-left: 5px;\">{{ nav.name}}</span>\r\n          </a>\r\n        </mat-nav-list>\r\n      </mat-sidenav>\r\n  \r\n      <mat-sidenav-content>\r\n        <router-outlet></router-outlet>\r\n      </mat-sidenav-content>\r\n    </mat-sidenav-container>\r\n  </div>  \r\n  \r\n  <!-- Copyright 2019 Google LLC. All Rights Reserved.\r\n      Use of this source code is governed by an MIT-style license that\r\n      can be found in the LICENSE file at http://angular.io/license -->");
 
 /***/ }),
 
@@ -97,7 +97,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>ejesdiarios works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-seminario\" style=\"padding:20px\">\n    <h2 id=\"titulo\">Ejes Diarios</h2>\n    <hr>\n    <div class=\"card-columns\">\n        <div class=\"card\" *ngFor=\"let clase of ejesDiarios; let i = index\">\n            <!--<img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">-->\n            <div class=\"card-body\">\n              <h5 class=\"card-title\">{{ejes}}</h5>\n              <p class=\"card-text\">Acá iría una breve descripción de la clase para.</p>\n              <p class=\"card-text\"><small class=\"text-muted\">Acá va la última vez que se modificó</small></p>\n              <button (click)= \"verEjes(ejes)\" type=\"button\" class=\"btn btn-outline-primary btn-block\" >Ver Ejes</button>\n            </div>\n        </div>\n    </div>\n  </div>\n  ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/paginas/ejesmensuales/ejesmensuales.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/paginas/ejesmensuales/ejesmensuales.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-seminario\" style=\"padding:20px\">\n    <h2 id=\"titulo\">Ejes Mensuales</h2>\n    <hr>\n    <div class=\"card-columns\">\n        <div class=\"card\" *ngFor=\"let clase of ejesMensuales; let i = index\">\n            <!--<img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">-->\n            <div class=\"card-body\">\n              <h5 class=\"card-title\">{{ejes}}</h5>\n              <p class=\"card-text\">Acá iría una breve descripción de la clase para.</p>\n              <p class=\"card-text\"><small class=\"text-muted\">Acá va la última vez que se modificó</small></p>\n              <button (click)= \"verEjes(ejes)\" type=\"button\" class=\"btn btn-outline-primary btn-block\" >Ver Ejes</button>\n            </div>\n        </div>\n    </div>\n  </div>\n");
 
 /***/ }),
 
@@ -366,6 +379,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_seminario_seminario_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/seminario/seminario.component */ "./src/app/components/seminario/seminario.component.ts");
 /* harmony import */ var _paginas_clases_clase_clase_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./paginas/clases/clase/clase.component */ "./src/app/paginas/clases/clase/clase.component.ts");
 /* harmony import */ var _paginas_ejesdiarios_ejesdiarios_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./paginas/ejesdiarios/ejesdiarios.component */ "./src/app/paginas/ejesdiarios/ejesdiarios.component.ts");
+/* harmony import */ var _paginas_ejesmensuales_ejesmensuales_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./paginas/ejesmensuales/ejesmensuales.component */ "./src/app/paginas/ejesmensuales/ejesmensuales.component.ts");
+
 
 
 
@@ -378,7 +393,10 @@ const routes = [
     //{path:'home', component: HomeComponent },
     { path: 'inicioBrigada', component: _components_seminario_seminario_component__WEBPACK_IMPORTED_MODULE_4__["SeminarioComponent"] },
     { path: 'clases/:nombre', component: _paginas_clases_clase_clase_component__WEBPACK_IMPORTED_MODULE_5__["ClaseComponent"] },
-    { path: 'ejesdiario/:nombre', component: _paginas_ejesdiarios_ejesdiarios_component__WEBPACK_IMPORTED_MODULE_6__["EjesdiariosComponent"] }
+    { path: 'ejes_diarios', component: _paginas_ejesdiarios_ejesdiarios_component__WEBPACK_IMPORTED_MODULE_6__["EjesdiariosComponent"] },
+    { path: 'ejes_diarios/:nombre', component: _paginas_ejesdiarios_ejesdiarios_component__WEBPACK_IMPORTED_MODULE_6__["EjesdiariosComponent"] },
+    { path: 'ejes_mensuales', component: _paginas_ejesmensuales_ejesmensuales_component__WEBPACK_IMPORTED_MODULE_7__["EjesmensualesComponent"] },
+    { path: 'ejes_mensuales/:nombre', component: _paginas_ejesmensuales_ejesmensuales_component__WEBPACK_IMPORTED_MODULE_7__["EjesmensualesComponent"] }
     //{path:'**', pathMatch: 'full', redirectTo: 'home'}
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -454,24 +472,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _paginas_clases_clase_clase_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./paginas/clases/clase/clase.component */ "./src/app/paginas/clases/clase/clase.component.ts");
 /* harmony import */ var _paginas_ejesdiarios_ejesdiarios_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./paginas/ejesdiarios/ejesdiarios.component */ "./src/app/paginas/ejesdiarios/ejesdiarios.component.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_seminario_seminario_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/seminario/seminario.component */ "./src/app/components/seminario/seminario.component.ts");
-/* harmony import */ var _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/sidenav/sidenav.component */ "./src/app/components/sidenav/sidenav.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm2015/menu.js");
-/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm2015/sidenav.js");
-/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm2015/list.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm2015/icon.js");
-/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm2015/toolbar.js");
-/* harmony import */ var _services_github_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/github.service */ "./src/app/services/github.service.ts");
+/* harmony import */ var _paginas_ejesmensuales_ejesmensuales_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./paginas/ejesmensuales/ejesmensuales.component */ "./src/app/paginas/ejesmensuales/ejesmensuales.component.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_seminario_seminario_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/seminario/seminario.component */ "./src/app/components/seminario/seminario.component.ts");
+/* harmony import */ var _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/sidenav/sidenav.component */ "./src/app/components/sidenav/sidenav.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/menu */ "./node_modules/@angular/material/esm2015/menu.js");
+/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm2015/sidenav.js");
+/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/list */ "./node_modules/@angular/material/esm2015/list.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm2015/icon.js");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm2015/toolbar.js");
+/* harmony import */ var _services_github_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/github.service */ "./src/app/services/github.service.ts");
 
 
 
 //Rutas
 
 //paginas
+
 
 
 //Componentes
@@ -495,28 +515,29 @@ let AppModule = class AppModule {
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-            _components_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-            _components_seminario_seminario_component__WEBPACK_IMPORTED_MODULE_8__["SeminarioComponent"],
-            _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_9__["SidenavComponent"],
+            _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+            _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
+            _components_seminario_seminario_component__WEBPACK_IMPORTED_MODULE_9__["SeminarioComponent"],
+            _components_sidenav_sidenav_component__WEBPACK_IMPORTED_MODULE_10__["SidenavComponent"],
             _paginas_clases_clase_clase_component__WEBPACK_IMPORTED_MODULE_4__["ClaseComponent"],
-            _paginas_ejesdiarios_ejesdiarios_component__WEBPACK_IMPORTED_MODULE_5__["EjesdiariosComponent"]
+            _paginas_ejesdiarios_ejesdiarios_component__WEBPACK_IMPORTED_MODULE_5__["EjesdiariosComponent"],
+            _paginas_ejesmensuales_ejesmensuales_component__WEBPACK_IMPORTED_MODULE_6__["EjesmensualesComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"],
-            _angular_material_menu__WEBPACK_IMPORTED_MODULE_12__["MatMenuModule"],
-            _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_13__["MatSidenavModule"],
-            _angular_material_list__WEBPACK_IMPORTED_MODULE_14__["MatListModule"],
-            _angular_material_icon__WEBPACK_IMPORTED_MODULE_15__["MatIconModule"],
-            _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_16__["MatToolbarModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"]
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"],
+            _angular_material_menu__WEBPACK_IMPORTED_MODULE_13__["MatMenuModule"],
+            _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_14__["MatSidenavModule"],
+            _angular_material_list__WEBPACK_IMPORTED_MODULE_15__["MatListModule"],
+            _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__["MatIconModule"],
+            _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_17__["MatToolbarModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"]
         ],
         providers: [
-            _services_github_service__WEBPACK_IMPORTED_MODULE_17__["GithubService"]
+            _services_github_service__WEBPACK_IMPORTED_MODULE_18__["GithubService"]
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })
 ], AppModule);
 
@@ -549,13 +570,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _services_github_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/github.service */ "./src/app/services/github.service.ts");
-
 
 
 let HomeComponent = class HomeComponent {
-    constructor(githubService) {
-        this.githubService = githubService;
+    constructor() {
         this.modulos = [
             {
                 nombre: "Inicio brigadas",
@@ -574,23 +592,10 @@ let HomeComponent = class HomeComponent {
                 link: "3ro"
             }
         ];
-        this.githubService.getEjesDiarios().subscribe(data => {
-            data.forEach(item => {
-                this.githubService.getEjeDiario(item.name).subscribe(data => {
-                    console.log(data);
-                    this.ejesdiarios.push({
-                        name: data.name
-                    });
-                });
-            });
-        });
     }
     ngOnInit() {
     }
 };
-HomeComponent.ctorParameters = () => [
-    { type: _services_github_service__WEBPACK_IMPORTED_MODULE_2__["GithubService"] }
-];
 HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-home',
@@ -663,7 +668,7 @@ let SeminarioComponent = class SeminarioComponent {
         });
     }
     verClase(nombre) {
-        this.router.navigate(['\clases', nombre + ".html"]);
+        this.router.navigate(['\clases', nombre + ".htm"]);
     }
 };
 SeminarioComponent.ctorParameters = () => [
@@ -716,10 +721,12 @@ let SidenavComponent = class SidenavComponent {
         //fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
         this.fillerNav = [
             { name: "Home", route: "", icon: "home" },
-            { name: "Inicio Brigadas", route: "seminario", icon: "school" },
+            { name: "Inicio Brigadas", route: "inicioBrigada", icon: "school" },
             { name: "1ro", route: "1ro", icon: "school" },
             { name: "2do", route: "2do", icon: "school" },
-            { name: "3ro", route: "3ro", icon: "school" }
+            { name: "3ro", route: "3ro", icon: "school" },
+            { name: "Ejes Mensuales", route: "ejes_mensuales", icon: "school" },
+            { name: "Ejes Diarios", route: "ejes_diarios", icon: "school" }
         ];
         this.shouldRun = true;
         this.mobileQuery = media.matchMedia('(max-width: 600px)');
@@ -856,13 +863,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EjesdiariosComponent", function() { return EjesdiariosComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_github_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/github.service */ "./src/app/services/github.service.ts");
+
+
 
 
 let EjesdiariosComponent = class EjesdiariosComponent {
-    constructor() { }
+    constructor(githubService, router) {
+        this.githubService = githubService;
+        this.router = router;
+    }
     ngOnInit() {
+        this.ejesDiarios = new Array();
+        //this.claseSeminario = new Array();
+        let i = 1;
+        let nombre;
+        this.githubService.getEjesDiarios().subscribe(data => {
+            data.forEach(item => {
+                if ((item.name).includes(".htm")) {
+                    this.githubService.getEjeDiario(item.name).subscribe(data => {
+                        let nombreEjes = data.name.split(".", 2)[0];
+                        console.log(nombreEjes);
+                        this.ejesDiarios.push(nombreEjes);
+                    });
+                }
+            });
+        });
     }
 };
+EjesdiariosComponent.ctorParameters = () => [
+    { type: _services_github_service__WEBPACK_IMPORTED_MODULE_3__["GithubService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
 EjesdiariosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-ejesdiarios',
@@ -870,6 +903,76 @@ EjesdiariosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./ejesdiarios.component.css */ "./src/app/paginas/ejesdiarios/ejesdiarios.component.css")).default]
     })
 ], EjesdiariosComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/paginas/ejesmensuales/ejesmensuales.component.css":
+/*!*******************************************************************!*\
+  !*** ./src/app/paginas/ejesmensuales/ejesmensuales.component.css ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2luYXMvZWplc21lbnN1YWxlcy9lamVzbWVuc3VhbGVzLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/paginas/ejesmensuales/ejesmensuales.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/paginas/ejesmensuales/ejesmensuales.component.ts ***!
+  \******************************************************************/
+/*! exports provided: EjesmensualesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EjesmensualesComponent", function() { return EjesmensualesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _services_github_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/github.service */ "./src/app/services/github.service.ts");
+
+
+
+
+let EjesmensualesComponent = class EjesmensualesComponent {
+    constructor(githubService, router) {
+        this.githubService = githubService;
+        this.router = router;
+    }
+    ngOnInit() {
+        this.ejesMensuales = new Array();
+        //this.claseSeminario = new Array();
+        let i = 1;
+        let nombre;
+        this.githubService.getEjesMensuales().subscribe(data => {
+            data.forEach(item => {
+                if ((item.name).includes(".pdf")) {
+                    this.githubService.getEjeMensual(item.name).subscribe(data => {
+                        let nombreEjes = data.name.split(".", 2)[0];
+                        console.log(nombreEjes);
+                        this.ejesMensuales.push(nombreEjes);
+                    });
+                }
+            });
+        });
+    }
+};
+EjesmensualesComponent.ctorParameters = () => [
+    { type: _services_github_service__WEBPACK_IMPORTED_MODULE_3__["GithubService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+EjesmensualesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-ejesmensuales',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./ejesmensuales.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/paginas/ejesmensuales/ejesmensuales.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./ejesmensuales.component.css */ "./src/app/paginas/ejesmensuales/ejesmensuales.component.css")).default]
+    })
+], EjesmensualesComponent);
 
 
 
@@ -892,37 +995,45 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let GithubService = class GithubService {
-    //private token = "a4cdec8407e7f937d9d07af2c522895d11584a28 ";
-    /*private  opts = {
-      headers: new HttpHeaders({
-        "Authorization": `Token ${this.token}`
-      })
-    };*/
     //inyección de http
     constructor(http) {
         this.http = http;
         //public results: Observable<Clases>;
         this.url = 'https://api.github.com/repos/batallaeducativa/batallaeducativa/contents/';
         this.url_content = 'https://raw.githubusercontent.com/batallaeducativa/batallaeducativa/master/clases/';
+        this.token = "99dc79c970d67447dfaaa9c1a5110792a62153ed ";
+        this.opts = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                "Authorization": `Token ${this.token}`
+            })
+        };
     }
     //CLASES
     //va a recibir este metodo un nombre de clase
     getClases(modulo) {
-        return this.http.get(this.url + "clases\\" + `${modulo}`);
-        //return this.http.get(this.url + "clases\\"+ `${modulo}`, this.opts);
+        //return this.http.get(this.url + "clases\\"+ `${modulo}`);
+        return this.http.get(this.url + "clases\\" + `${modulo}`, this.opts);
     }
     getClase(modulo, clase) {
-        return this.http.get(this.url + "clases\\" + `${modulo}` + "\\" + `${clase}`);
-        //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`, this.opts);
+        //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`);
+        return this.http.get(this.url + "clases\\" + `${modulo}` + "\\" + `${clase}`, this.opts);
     }
     //EJES
     getEjesDiarios() {
-        return this.http.get(this.url + "ejes\\diario\\");
-        //return this.http.get(this.url + "ejes\\diario\\", this.opts);
+        //return this.http.get(this.url + "ejes\\diario\\");
+        return this.http.get(this.url + "ejes\\diario\\", this.opts);
     }
     getEjeDiario(eje) {
-        return this.http.get(this.url + "ejes\\diario\\" + `${eje}`);
-        //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`, this.opts);
+        //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
+        return this.http.get(this.url + "ejes\\diario\\" + `${eje}`, this.opts);
+    }
+    getEjesMensuales() {
+        //return this.http.get(this.url + "ejes\\diario\\");
+        return this.http.get(this.url + "ejes\\mensual\\", this.opts);
+    }
+    getEjeMensual(eje) {
+        //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
+        return this.http.get(this.url + "ejes\\mensual\\" + `${eje}`, this.opts);
     }
 };
 GithubService.ctorParameters = () => [
