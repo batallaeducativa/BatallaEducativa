@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { GithubService } from '../../services/github.service';
 import { Router } from '@angular/router';
 
@@ -14,17 +14,21 @@ export class HomeComponent implements OnInit {
       nombre: "actividades"      
     },
     {
-      nombre: "ejediario",
+      nombre: "ejesdiarios",
     },
     {
-      nombre: "ejemensual",
+      nombre: "ejesmensuales",
     }
   ]
-
+  
   constructor(private router: Router) { 
   }
 
   ngOnInit() {
+  }
+
+  mensajeUsuario(){
+    alert("No hay actividades cargadas todavía para este año");
   }
 
   verActividades(){
