@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent} from './components/home/home.component';
-import { SeminarioComponent } from './components/seminario/seminario.component';
-import { ClaseComponent } from './paginas/clases/clase/clase.component';
+import { ModuloComponent } from './components/modulo/modulo.component';
+import { ActividadesComponent } from './paginas/clases/actividades/actividades.component';
 import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.component';
 import { EjesmensualesComponent } from './paginas/ejesmensuales/ejesmensuales.component';
 
 const routes: Routes = [
   {path:'home', component: HomeComponent },
-  {path:'inicioBrigada/:modulo', component: SeminarioComponent},
+  {path:'modulo/:nombre', component: ModuloComponent},
+  {path:'actividades/:nombre', component: ActividadesComponent},
+  {path:'ejesdiarios/:nombre', component: ActividadesComponent},
+  //{path:'clase/:nombre', component: ActividadesComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'home'}
   /*
   {path:'clases/:nombre', component: ClaseComponent},

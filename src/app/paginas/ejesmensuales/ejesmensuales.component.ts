@@ -19,22 +19,5 @@ export class EjesmensualesComponent implements OnInit {
   }
 
   ngOnInit() {
-  this.ejesMensuales = new Array();
-  //this.claseSeminario = new Array();
-  let i = 1;
-  let nombre: string;
-
-  this.githubService.getEjesMensuales().subscribe(data => {
-    data.forEach(item => {   
-      if((item.name).includes(".pdf"))
-      {
-        this.githubService.getEjeMensual(item.name).subscribe(data => {
-          let nombreEjes = data.name.split(".",2)[0];
-          console.log(nombreEjes);
-          this.ejesMensuales.push(nombreEjes);
-        });
-      }            
-    });
-    });
   }
 }

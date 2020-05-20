@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../../services/github.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,29 +11,31 @@ export class HomeComponent implements OnInit {
 
   private modulos:any[] = [
     {
-      nombre: "Inicio brigadas",
-      link: "inicioBrigada"
+      nombre: "actividades"      
     },
     {
-      nombre: "1ro",
-      link: "1ro"
+      nombre: "ejediario",
     },
     {
-      nombre: "2do",
-      link: "2do"
-    },
-    {
-      nombre: "3ro",
-      link: "3ro"
+      nombre: "ejemensual",
     }
   ]
 
-  private ejesdiarios:any[];
-
-  constructor() { 
+  constructor(private router: Router) { 
   }
 
   ngOnInit() {
   }
 
+  verActividades(){
+    this.router.navigate(['\modulo',"actividades"]);
+  }
+
+  verEjesDiarios(){
+    this.router.navigate(['\modulo',"ejesdiarios"]);
+  }
+
+  verEjesMensuales(){
+    this.router.navigate(['\modulo',"ejesmensuales"]);
+  }
 }

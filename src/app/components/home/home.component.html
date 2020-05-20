@@ -10,38 +10,45 @@
   </div>-->
   
   <div class="content" role="main">
-  
-    
-      <h2 id="titulo">Materiales de formación</h2>
+    <h2 id="titulo">Materiales de formación</h2>
   
     <div class="card-container">
       <div class="row">
-        <div class="col-sm-3 d-flex justify-content-center" *ngFor="let modulo of modulos">
-              <a class="card  text-center" [routerLink]="modulo.link">
+        <div class="col-sm-3 d-flex justify-content-center">
+              <a class="card  text-center" (click)= "verActividades()">
                   <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-                    <span>{{modulo.nombre}}</span>          
+                    <span>Actividades</span>          
                   <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    
               </a>
           </div>
+        <div class="col-sm-3 d-flex justify-content-center">
+          <a class="card  text-center" (click)= "verEjesDiarios()">
+              <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                <span>1ro</span>          
+              <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    
+          </a>
         </div>
+        <div class="col-sm-3 d-flex justify-content-center">
+          <a class="card  text-center">
+              <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                <span>2do</span>          
+              <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    
+          </a>
+        </div>
+        <div class="col-sm-3 d-flex justify-content-center">
+          <a class="card  text-center" (click)= "verEjesMensuales()">
+              <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                <span>3ro</span>          
+              <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    
+          </a>
+        </div>
+    </div>
     </div>
   <!-- Next Steps -->
   <h2 id="titulo">Coyuntura</h2>
   <p>Documentos para el seguimiento de la coyuntura, el debate y la reflexión como herramienta ideológica de la organización</p>
   
   <input type="hidden" #selection>
-  
-  <div class="card-container">
-    <div class="row">
-      <div class="col-sm-3 d-flex justify-content-center" *ngFor="let ejediario of ejesdiarios | slice:0:10">
-            <a class="card  text-center" [routerLink]="ejediario.name">
-                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-                  <span>{{ejediario.name}}</span>          
-                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    
-            </a>
-        </div>
-    </div>
-  </div>
   <!--<div class="card-container">-->
     <!--<div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="30" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
@@ -58,7 +65,7 @@
           <div class="card-body">
             <h5 class="card-title">EJES MENSUALES</h5>
             <p class="card-text">Descripción corta del ejes</p>
-            <button class="btn btn-outline-primary btn-block nav-item nav-link-edit" [routerLink]="['ejes_mensuales']">Ver más ...</button >
+            <button class="btn btn-outline-primary btn-block nav-item nav-link-edit"  (click)= "verEjesMensuales()">Ver más ...</button >
           </div>
         </div>
         <div class="col-md-3">
@@ -68,7 +75,7 @@
           <div class="card-body">
             <h5 class="card-title">EJES DIARIOS</h5>
             <p class="card-text">Descripción corta del ejes</p>
-            <button class="btn btn-outline-primary btn-block nav-item nav-link-edit" [routerLink]="['ejes_diarios']">Ver más ...</button >
+            <button class="btn btn-outline-primary btn-block nav-item nav-link-edit" (click)= "verEjesDiarios()">Ver más ...</button >
           </div>
         </div>
       </div>

@@ -13,12 +13,12 @@ export class SidenavComponent implements OnInit {
   //fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
   fillerNav=[
     {name:"Home", route:"", icon:"home"},
-    {name:"Inicio Brigadas", route:"inicioBrigada", icon:"school"},
+    {name:"Actividades", route:"modulo/actividades", icon:"school"},
     {name:"1ro", route:"1ro", icon:"school"},
     {name:"2do", route:"2do", icon:"school"},
     {name:"3ro", route:"3ro", icon:"school"},
-    {name:"Ejes Mensuales", route:"ejes_mensuales", icon:"school"},
-    {name:"Ejes Diarios", route:"ejes_diarios", icon:"school"}
+    {name:"Ejes Mensuales", route:"modulo/ejesmensuales", icon:"school"},
+    {name:"Ejes Diarios", route:"modulo/ejesdiarios", icon:"school"}
   ]
 
   private _mobileQueryListener: () => void;

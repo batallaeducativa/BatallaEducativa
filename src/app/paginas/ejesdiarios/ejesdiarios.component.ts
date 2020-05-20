@@ -4,6 +4,7 @@ import { EMPTY, Observable } from 'rxjs';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { Router } from '@angular/router';
 import { GithubService } from '../../services/github.service'
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -15,32 +16,13 @@ import { GithubService } from '../../services/github.service'
 export class EjesdiariosComponent implements OnInit {
 
   public ejesDiarios;
+  public nombreClase
 
   constructor(private githubService: GithubService,
-    private router: Router) { 
+    private route : ActivatedRoute) {    
+      this.nombreClase = this.route.snapshot.paramMap.get('nombre');
   }
 
   ngOnInit() {
-  this.ejesDiarios = new Array();
-  //this.claseSeminario = new Array();
-  let i = 1;
-  let nombre: string;
-  
-  this.githubService.getEjesDiarios().subscribe(data => {
-    
-    data.forEach(item => {   
-        if((item.name).includes(".htm"))
-        {
-          this.githubService.getEjeDiario(item.name).subscribe(data => {
-            let nombreEjes = data.name.split(".",2)[0];
-            this.ejesDiarios.push(nombreEjes);
-          });
-        }            
-      });
-    });
-  }
-
-  verEjes(nombre: string){
-    this.router.navigate([nombre + ".htm"]);
   }
 }

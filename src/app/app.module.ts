@@ -5,14 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 //paginas
-import { ClaseComponent } from './paginas/clases/clase/clase.component';
-import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.component';
-import { EjesmensualesComponent } from './paginas/ejesmensuales/ejesmensuales.component';
+import { ActividadesComponent } from './paginas/clases/actividades/actividades.component';
+//import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.component';
+//import { EjesmensualesComponent } from './paginas/ejesmensuales/ejesmensuales.component';
 
 //Componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { SeminarioComponent } from './components/seminario/seminario.component';
+import { ModuloComponent } from './components/modulo/modulo.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 //Modulos
@@ -35,11 +35,11 @@ import { GithubService } from './services/github.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    SeminarioComponent,
+    ModuloComponent,
     SidenavComponent,
-    ClaseComponent,
-    EjesdiariosComponent,
-    EjesmensualesComponent
+    ActividadesComponent
+    /*EjesdiariosComponent,
+    EjesmensualesComponent*/
   ],
   imports: [
     BrowserModule,

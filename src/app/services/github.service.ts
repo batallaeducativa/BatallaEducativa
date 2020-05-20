@@ -11,13 +11,12 @@ export class GithubService {
   //public results: Observable<Clases>;
   public url: String = 'https://api.github.com/repos/batallaeducativa/batallaeducativa/contents/';
   private url_content: string = 'https://raw.githubusercontent.com/batallaeducativa/batallaeducativa/master/clases/';
-
-/*  private  opts = {
+  
+  /*private  opts = {
     headers: new HttpHeaders({
       "Authorization": `Token ${this.token}`
     })
-  };
-  //inyección de http*/
+  };*/
   constructor(private http: HttpClient) { }
 
   //CLASES
@@ -34,23 +33,23 @@ export class GithubService {
   }
 
   //EJES
-  getEjesDiarios(): Observable<any>{
-    return this.http.get(this.url + "ejes\\diario\\");
-    //return this.http.get(this.url + "ejes\\diario\\", this.opts);
+  getEjesDiarios(modulo:string): Observable<any>{
+    return this.http.get(this.url + "ejes\\" + `${modulo}`);
+    //return this.http.get(this.url + "ejes\\"  + `${modulo}`, this.opts);
   }
 
-  getEjeDiario(eje: string): Observable<any>{
-    return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
-    //return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`, this.opts);
+  getEjeDiario(modulo:string, eje: string): Observable<any>{
+    return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`);
+    //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`, this.opts);
   }
 
-  getEjesMensuales(): Observable<any>{
-    return this.http.get(this.url + "ejes\\diario\\");
-    //return this.http.get(this.url + "ejes\\mensual\\", this.opts);
+  getEjesMensuales(modulo:string): Observable<any>{
+    return this.http.get(this.url + "ejes\\" + `${modulo}`);
+    //return this.http.get(this.url + "ejes\\" + `${modulo}`, this.opts);
   }
 
-  getEjeMensual(eje: string): Observable<any>{
-    return this.http.get<any>(this.url + "ejes\\diario\\"+ `${eje}`);
-    //return this.http.get<any>(this.url + "ejes\\mensual\\"+ `${eje}`, this.opts);
+  getEjeMensual(modulo:string, eje: string): Observable<any>{
+    return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`);
+    //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`, this.opts);
   }
 }
