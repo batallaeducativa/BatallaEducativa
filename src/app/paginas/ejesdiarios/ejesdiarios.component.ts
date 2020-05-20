@@ -25,18 +25,22 @@ export class EjesdiariosComponent implements OnInit {
   //this.claseSeminario = new Array();
   let i = 1;
   let nombre: string;
-
+  
   this.githubService.getEjesDiarios().subscribe(data => {
+    
     data.forEach(item => {   
-      if((item.name).includes(".htm"))
-      {
-        this.githubService.getEjeDiario(item.name).subscribe(data => {
-          let nombreEjes = data.name.split(".",2)[0];
-          console.log(nombreEjes);
-          this.ejesDiarios.push(nombreEjes);
-        });
-      }            
+        if((item.name).includes(".htm"))
+        {
+          this.githubService.getEjeDiario(item.name).subscribe(data => {
+            let nombreEjes = data.name.split(".",2)[0];
+            this.ejesDiarios.push(nombreEjes);
+          });
+        }            
+      });
     });
-    });
+  }
+
+  verEjes(nombre: string){
+    this.router.navigate([nombre + ".htm"]);
   }
 }

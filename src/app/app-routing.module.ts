@@ -7,14 +7,15 @@ import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.componen
 import { EjesmensualesComponent } from './paginas/ejesmensuales/ejesmensuales.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent },
-  //{path:'home', component: HomeComponent },
-  {path:'inicioBrigada', component: SeminarioComponent},
+  {path:'home', component: HomeComponent },
+  {path:'inicioBrigada/:modulo', component: SeminarioComponent},
+  {path:'**', pathMatch: 'full', redirectTo: 'home'}
+  /*
   {path:'clases/:nombre', component: ClaseComponent},
   {path:'ejes_diarios', component: EjesdiariosComponent}, 
   {path:'ejes_diarios/:nombre', component: EjesdiariosComponent}, 
   {path:'ejes_mensuales', component: EjesmensualesComponent},
-  {path:'ejes_mensuales/:nombre', component: EjesmensualesComponent} 
+  {path:'ejes_mensuales/:nombre', component: EjesmensualesComponent} */
   //{path:'**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
