@@ -671,10 +671,10 @@ let ModuloComponent = class ModuloComponent {
         switch (this.modulo) {
             case "actividades": {
                 this.titulo = "Actividades";
-                this.githubService.getClases(this.modulo).subscribe(data => {
+                this.githubService.getClases('actividades').subscribe(data => {
                     data.forEach(item => {
                         if ((item.name).includes(".htm")) {
-                            this.githubService.getClase(this.modulo, item.name).subscribe(data => {
+                            this.githubService.getClase('actividades', item.name).subscribe(data => {
                                 let nombreClase = data.name.split(".", 2)[0];
                                 this.itemsModulo.push(nombreClase);
                             });
@@ -703,10 +703,10 @@ let ModuloComponent = class ModuloComponent {
             case "ejesmensual": {
                 this.titulo = "Ejes Mesuales";
                 console.log(this.modulo);
-                this.githubService.getEjesMensuales(this.modulo).subscribe(data => {
+                this.githubService.getEjesMensuales('ejesmensuales').subscribe(data => {
                     console.log(data);
                     data.forEach(item => {
-                        this.githubService.getEjeMensual(this.modulo, item.name).subscribe(data => {
+                        this.githubService.getEjeMensual('ejesmensuales', item.name).subscribe(data => {
                             console.log(data);
                             let nombreEje = data.name.split(".", 2)[0];
                             console.log(nombreEje);
@@ -1012,44 +1012,43 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let GithubService = class GithubService {
+    /*private  opts = {
+      headers: new HttpHeaders({
+        "Authorization": `Token ${this.token}`
+      })
+    };*/
     constructor(http) {
         this.http = http;
         //public results: Observable<Clases>;
         this.url = 'https://api.github.com/repos/batallaeducativa/batallaeducativa/contents/';
         this.url_content = 'https://raw.githubusercontent.com/batallaeducativa/batallaeducativa/master/clases/';
-        this.token = "35f5db9f383385b665378e1dbfc77873f08dae6b";
-        this.opts = {
-            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-                "Authorization": `Token ${this.token}`
-            })
-        };
     }
     //CLASES
     //va a recibir este metodo un nombre de clase
     getClases(modulo) {
-        //return this.http.get(this.url + "clases\\"+ `${modulo}`);
-        return this.http.get(this.url + "clases\\" + `${modulo}`, this.opts);
+        return this.http.get(this.url + "clases\\" + `${modulo}`);
+        //return this.http.get(this.url + "clases\\"+ `${modulo}`, this.opts);
     }
     getClase(modulo, clase) {
-        //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`);
-        return this.http.get(this.url + "clases\\" + `${modulo}` + "\\" + `${clase}`, this.opts);
+        return this.http.get(this.url + "clases\\" + `${modulo}` + "\\" + `${clase}`);
+        //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`, this.opts);
     }
     //EJES
     getEjesDiarios(modulo) {
-        //return this.http.get(this.url + "ejes\\" + `${modulo}`);
-        return this.http.get(this.url + "ejes\\" + `${modulo}`, this.opts);
+        return this.http.get(this.url + "ejes\\" + `${modulo}`);
+        //return this.http.get(this.url + "ejes\\"  + `${modulo}`, this.opts);
     }
     getEjeDiario(modulo, eje) {
-        //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`);
-        return this.http.get(this.url + "ejes\\" + `${modulo}` + "\\" + `${eje}`, this.opts);
+        return this.http.get(this.url + "ejes\\" + `${modulo}` + "\\" + `${eje}`);
+        //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`, this.opts);
     }
     getEjesMensuales(modulo) {
-        //return this.http.get(this.url + "ejes\\" + `${modulo}`);
-        return this.http.get(this.url + "ejes\\" + `${modulo}`, this.opts);
+        return this.http.get(this.url + "ejes\\" + `${modulo}`);
+        //return this.http.get(this.url + "ejes\\" + `${modulo}`, this.opts);
     }
     getEjeMensual(modulo, eje) {
-        //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`);
-        return this.http.get(this.url + "ejes\\" + `${modulo}` + "\\" + `${eje}`, this.opts);
+        return this.http.get(this.url + "ejes\\" + `${modulo}` + "\\" + `${eje}`);
+        //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`, this.opts);
     }
 };
 GithubService.ctorParameters = () => [

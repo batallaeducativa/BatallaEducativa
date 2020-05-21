@@ -1307,10 +1307,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             case "actividades":
               {
                 this.titulo = "Actividades";
-                this.githubService.getClases(this.modulo).subscribe(function (data) {
+                this.githubService.getClases('actividades').subscribe(function (data) {
                   data.forEach(function (item) {
                     if (item.name.includes(".htm")) {
-                      _this.githubService.getClase(_this.modulo, item.name).subscribe(function (data) {
+                      _this.githubService.getClase('actividades', item.name).subscribe(function (data) {
                         var nombreClase = data.name.split(".", 2)[0];
 
                         _this.itemsModulo.push(nombreClase);
@@ -1345,10 +1345,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               {
                 this.titulo = "Ejes Mesuales";
                 console.log(this.modulo);
-                this.githubService.getEjesMensuales(this.modulo).subscribe(function (data) {
+                this.githubService.getEjesMensuales('ejesmensuales').subscribe(function (data) {
                   console.log(data);
                   data.forEach(function (item) {
-                    _this.githubService.getEjeMensual(_this.modulo, item.name).subscribe(function (data) {
+                    _this.githubService.getEjeMensual('ejesmensuales', item.name).subscribe(function (data) {
                       console.log(data);
                       var nombreEje = data.name.split(".", 2)[0];
                       console.log(nombreEje);
@@ -1899,6 +1899,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/common/fesm2015/http.js");
 
     var GithubService = /*#__PURE__*/function () {
+      /*private  opts = {
+        headers: new HttpHeaders({
+          "Authorization": `Token ${this.token}`
+        })
+      };*/
       function GithubService(http) {
         _classCallCheck(this, GithubService);
 
@@ -1906,12 +1911,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.url = 'https://api.github.com/repos/batallaeducativa/batallaeducativa/contents/';
         this.url_content = 'https://raw.githubusercontent.com/batallaeducativa/batallaeducativa/master/clases/';
-        this.token = "35f5db9f383385b665378e1dbfc77873f08dae6b";
-        this.opts = {
-          headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-            "Authorization": "Token ".concat(this.token)
-          })
-        };
       } //CLASES
       //va a recibir este metodo un nombre de clase
 
@@ -1919,39 +1918,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(GithubService, [{
         key: "getClases",
         value: function getClases(modulo) {
-          //return this.http.get(this.url + "clases\\"+ `${modulo}`);
-          return this.http.get(this.url + "clases\\" + "".concat(modulo), this.opts);
+          return this.http.get(this.url + "clases\\" + "".concat(modulo)); //return this.http.get(this.url + "clases\\"+ `${modulo}`, this.opts);
         }
       }, {
         key: "getClase",
         value: function getClase(modulo, clase) {
-          //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`);
-          return this.http.get(this.url + "clases\\" + "".concat(modulo) + "\\" + "".concat(clase), this.opts);
+          return this.http.get(this.url + "clases\\" + "".concat(modulo) + "\\" + "".concat(clase)); //return this.http.get<any>(this.url + "clases\\"+ `${modulo}` + "\\" + `${clase}`, this.opts);
         } //EJES
 
       }, {
         key: "getEjesDiarios",
         value: function getEjesDiarios(modulo) {
-          //return this.http.get(this.url + "ejes\\" + `${modulo}`);
-          return this.http.get(this.url + "ejes\\" + "".concat(modulo), this.opts);
+          return this.http.get(this.url + "ejes\\" + "".concat(modulo)); //return this.http.get(this.url + "ejes\\"  + `${modulo}`, this.opts);
         }
       }, {
         key: "getEjeDiario",
         value: function getEjeDiario(modulo, eje) {
-          //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`);
-          return this.http.get(this.url + "ejes\\" + "".concat(modulo) + "\\" + "".concat(eje), this.opts);
+          return this.http.get(this.url + "ejes\\" + "".concat(modulo) + "\\" + "".concat(eje)); //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`, this.opts);
         }
       }, {
         key: "getEjesMensuales",
         value: function getEjesMensuales(modulo) {
-          //return this.http.get(this.url + "ejes\\" + `${modulo}`);
-          return this.http.get(this.url + "ejes\\" + "".concat(modulo), this.opts);
+          return this.http.get(this.url + "ejes\\" + "".concat(modulo)); //return this.http.get(this.url + "ejes\\" + `${modulo}`, this.opts);
         }
       }, {
         key: "getEjeMensual",
         value: function getEjeMensual(modulo, eje) {
-          //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`);
-          return this.http.get(this.url + "ejes\\" + "".concat(modulo) + "\\" + "".concat(eje), this.opts);
+          return this.http.get(this.url + "ejes\\" + "".concat(modulo) + "\\" + "".concat(eje)); //return this.http.get<any>(this.url + "ejes\\" + `${modulo}` + "\\"+ `${eje}`, this.opts);
         }
       }]);
 
