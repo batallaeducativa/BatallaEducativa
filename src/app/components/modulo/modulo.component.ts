@@ -37,7 +37,6 @@ export class ModuloComponent implements OnInit {
                 {
                   this.githubService.getClase(this.modulo, item.name).subscribe(data => {
                     let nombreClase = data.name.split(".",2)[0];
-                    console.log(nombreClase);
                     this.itemsModulo.push(nombreClase);
                   });
                 }            
@@ -49,15 +48,14 @@ export class ModuloComponent implements OnInit {
         });
         break;
       }
-      case "ejesdiarios":{
+      case "ejesdiario":{
         this.titulo = "Ejes Diarios";
-        this.githubService.getEjesDiarios(this.modulo).subscribe(data => {
+        this.githubService.getEjesDiarios('ejesdiarios').subscribe(data => {
           data.forEach(item => {   
               if((item.name).includes(".htm"))
               {
-                this.githubService.getEjeDiario(this.modulo, item.name).subscribe(data => {
+                this.githubService.getEjeDiario('ejesdiarios', item.name).subscribe(data => {
                   let nombreEje = data.name.split(".",2)[0];
-                  console.log(nombreEje);
                   this.itemsModulo.push(nombreEje);
                 });
               }            
@@ -65,7 +63,7 @@ export class ModuloComponent implements OnInit {
         }); 
         break;
       }
-      case "ejesmensuales":{
+      case "ejesmensual":{
         this.titulo = "Ejes Mesuales";
         console.log(this.modulo);
         this.githubService.getEjesMensuales(this.modulo).subscribe(data => {
@@ -84,8 +82,7 @@ export class ModuloComponent implements OnInit {
     }
   }
 
-  verItem(nombre: string){
-    console.log(this.modulo, nombre);
+  verItem(nombre: string){    
     this.navigateRoute.navigate([this.modulo, nombre + ".htm"]);
   }
 }

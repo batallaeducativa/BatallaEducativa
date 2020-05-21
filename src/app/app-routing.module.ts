@@ -10,8 +10,8 @@ const routes: Routes = [
   {path:'home', component: HomeComponent },
   {path:'modulo/:nombre', component: ModuloComponent},
   {path:'actividades/:nombre', component: ActividadesComponent},
-  {path:'ejesdiarios/:nombre', component: EjesdiarioComponent},
-  {path:'ejesmensual/:nombre', component: EjesdiarioComponent},
+  {path:'ejesdiario/:nombre', component: EjesdiarioComponent},
+  {path:'ejesmensual/:nombre', component: EjesmensualComponent},
   //{path:'clase/:nombre', component: ActividadesComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'home'}
   /*

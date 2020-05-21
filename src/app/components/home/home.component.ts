@@ -14,10 +14,10 @@ export class HomeComponent implements OnInit {
       nombre: "actividades"      
     },
     {
-      nombre: "ejesdiarios",
+      nombre: "ejesdiario",
     },
     {
-      nombre: "ejesmensuales",
+      nombre: "ejesmensual",
     }
   ]
   
@@ -36,10 +36,10 @@ export class HomeComponent implements OnInit {
   }
 
   verEjesDiarios(){
-    this.router.navigate(['\modulo',"ejesdiarios"]);
+    this.router.navigate(['\modulo',"ejesdiario"]);
   }
 
   verEjesMensuales(){
-    this.router.navigate(['\modulo',"ejesmensuales"]);
+    this.router.navigate(['\modulo',"ejesmensual"]);
   }
 }
