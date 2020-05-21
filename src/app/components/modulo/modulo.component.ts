@@ -31,11 +31,11 @@ export class ModuloComponent implements OnInit {
     switch(this.modulo){
       case "actividades":{
       this.titulo = "Actividades";
-      this.githubService.getClases('inicioBrigada').subscribe(data => {
+      this.githubService.getClases(this.modulo).subscribe(data => {
             data.forEach(item => {   
                 if((item.name).includes(".htm"))
                 {
-                  this.githubService.getClase('inicioBrigada', item.name).subscribe(data => {
+                  this.githubService.getClase(this.modulo, item.name).subscribe(data => {
                     let nombreClase = data.name.split(".",2)[0];
                     console.log(nombreClase);
                     this.itemsModulo.push(nombreClase);
@@ -55,7 +55,7 @@ export class ModuloComponent implements OnInit {
           data.forEach(item => {   
               if((item.name).includes(".htm"))
               {
-                this.githubService.getEjeDiario('ejesdiarios', item.name).subscribe(data => {
+                this.githubService.getEjeDiario(this.modulo, item.name).subscribe(data => {
                   let nombreEje = data.name.split(".",2)[0];
                   console.log(nombreEje);
                   this.itemsModulo.push(nombreEje);
@@ -71,7 +71,7 @@ export class ModuloComponent implements OnInit {
         this.githubService.getEjesMensuales(this.modulo).subscribe(data => {
           console.log(data);
           data.forEach(item => {   
-                this.githubService.getEjeMensual('ejesmensuales', item.name).subscribe(data => {
+                this.githubService.getEjeMensual(this.modulo, item.name).subscribe(data => {
                   console.log(data);
                   let nombreEje = data.name.split(".",2)[0];
                   console.log(nombreEje);

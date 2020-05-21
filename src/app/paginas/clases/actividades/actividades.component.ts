@@ -19,11 +19,11 @@ export class ActividadesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.githubService.getClase('inicioBrigada', this.nombreClase).subscribe(data => {
+    this.githubService.getClase('actividades', this.nombreClase).subscribe(data => {
       //base64 decode to unicode
         this.contenidoClase = decodeURIComponent(atob(data.content).split('').map(function(c) {
           return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
       }).join(''));
     });
-    }      
+  }      
 }

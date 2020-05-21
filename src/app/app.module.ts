@@ -6,8 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 //paginas
 import { ActividadesComponent } from './paginas/clases/actividades/actividades.component';
-//import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.component';
-//import { EjesmensualesComponent } from './paginas/ejesmensuales/ejesmensuales.component';
+import { EjesdiarioComponent } from './paginas/ejesdiario/ejesdiario.component';
+import { EjesmensualComponent } from './paginas/ejesmensual/ejesmensual.component';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -37,9 +37,9 @@ import { GithubService } from './services/github.service';
     HomeComponent,
     ModuloComponent,
     SidenavComponent,
-    ActividadesComponent
-    /*EjesdiariosComponent,
-    EjesmensualesComponent*/
+    ActividadesComponent,
+    EjesdiarioComponent,
+    EjesmensualComponent
   ],
   imports: [
     BrowserModule,

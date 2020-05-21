@@ -3,14 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent} from './components/home/home.component';
 import { ModuloComponent } from './components/modulo/modulo.component';
 import { ActividadesComponent } from './paginas/clases/actividades/actividades.component';
-import { EjesdiariosComponent } from './paginas/ejesdiarios/ejesdiarios.component';
-import { EjesmensualesComponent } from './paginas/ejesmensuales/ejesmensuales.component';
+import { EjesdiarioComponent } from './paginas/ejesdiario/ejesdiario.component';
+import { EjesmensualComponent } from './paginas/ejesmensual/ejesmensual.component';
 
 const routes: Routes = [
   {path:'home', component: HomeComponent },
   {path:'modulo/:nombre', component: ModuloComponent},
   {path:'actividades/:nombre', component: ActividadesComponent},
-  {path:'ejesdiarios/:nombre', component: ActividadesComponent},
+  {path:'ejesdiarios/:nombre', component: EjesdiarioComponent},
+  {path:'ejesmensual/:nombre', component: EjesdiarioComponent},
   //{path:'clase/:nombre', component: ActividadesComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'home'}
   /*
